@@ -71,17 +71,22 @@
 
 //condition ternary operator
 
-const age = 14;
-age >= 18 ? console.log("du tuoi uong ruou") : console.log("chua du tuoi uong ruou");
+// const age = 14;
+// age >= 18 ? console.log("du tuoi uong ruou") : console.log("chua du tuoi uong ruou");
 
-const drink = age >= 18 ? "du tuoi uong ruou roi ne" : "chua du tuoi uong ruou ne";
-console.log(drink);
+// const drink = age >= 18 ? "du tuoi uong ruou roi ne" : "chua du tuoi uong ruou ne";
+// console.log(drink);
 
-// so sanh voi cau lenh if/else
-let drink2;
-if (age >= 18) {
-    drink2 = "du tuoi uong ruou roi ne";
-} else {
-    drink2 = "chua du tuoi uong ruou ne";
-}
-console.log(drink2);
+// // so sanh voi cau lenh if/else
+// let drink2;
+// if (age >= 18) {
+//     drink2 = "du tuoi uong ruou roi ne";
+// } else {
+//     drink2 = "chua du tuoi uong ruou ne";
+// }
+// console.log(drink2);
+
+//coding challege
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`hoa don la ${bill}, phan tram tien boa la ${tip}, Tong cong tien nhan cua ban la ${bill + tip}`);
