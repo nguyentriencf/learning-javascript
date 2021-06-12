@@ -15,16 +15,56 @@
 
 // coding challenge 03
 
-const scoreTrien = (1000) / 3;
-const scoreTrien2 = (1000) / 3;
+// const scoreTrien = (1000) / 3;
+// const scoreTrien2 = (1000) / 3;
 
-console.log(scoreTrien, scoreTrien2);
-if (scoreTrien > scoreTrien2 && scoreTrien >= 100) {
-    console.log("trien la nguoi chien thang");
-} else if (scoreTrien2 > scoreTrien && scoreTrien2 >= 100) {
-    console.log("trien2 la nguoi chien thang");
-} else if (scoreTrien === scoreTrien2 && scoreTrien >= 100 && scoreTrien2 >= 100) {
-    console.log("ca hai deu la nguoi chien thang");
+// console.log(scoreTrien, scoreTrien2);
+// if (scoreTrien > scoreTrien2 && scoreTrien >= 100) {
+//     console.log("trien la nguoi chien thang");
+// } else if (scoreTrien2 > scoreTrien && scoreTrien2 >= 100) {
+//     console.log("trien2 la nguoi chien thang");
+// } else if (scoreTrien === scoreTrien2 && scoreTrien >= 100 && scoreTrien2 >= 100) {
+//     console.log("ca hai deu la nguoi chien thang");
+// } else {
+//     console.log("Khong co ai la nguoi chien thang");
+// }
+
+// comparation betweend switch,case and if/else statement
+
+const day = "friday";
+
+switch (day) {
+    case "monday":
+        console.log(`thu 2 ${day}`);
+        break;
+    case "tuesday":
+    case "wednesday":
+        console.log("thu 3 hoac thu 4");
+        break;
+    case "thurday":
+        console.log(`thu ${day}`);
+        break;
+    case "friday":
+        console.log("hom nay la thu 6 ngay 13 em oi");
+        break;
+    case "saturday":
+        console.log("thu 7");
+        break;
+    default:
+        console.log("chu nhat");
+        break;
+}
+
+if (day === "monday") {
+    console.log(`thu 2 ${day}`);
+} else if (day === "tuesday" || day === "wednesday") {
+    console.log("thu 3 hoac thu 4");
+} else if (day === "thurday") {
+    console.log(`thu ${day}`);
+} else if (day === "friday") {
+    console.log("hom nay la thu 6 ngay 13 em oi");
+} else if (day === "saturday") {
+    console.log("thu 7");
 } else {
-    console.log("Khong co ai la nguoi chien thang");
+    console.log("chu nhat");
 }
