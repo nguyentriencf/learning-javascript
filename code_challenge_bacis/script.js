@@ -31,40 +31,57 @@
 
 // comparation betweend switch,case and if/else statement
 
-const day = "friday";
+// const day = "friday";
 
-switch (day) {
-    case "monday":
-        console.log(`thu 2 ${day}`);
-        break;
-    case "tuesday":
-    case "wednesday":
-        console.log("thu 3 hoac thu 4");
-        break;
-    case "thurday":
-        console.log(`thu ${day}`);
-        break;
-    case "friday":
-        console.log("hom nay la thu 6 ngay 13 em oi");
-        break;
-    case "saturday":
-        console.log("thu 7");
-        break;
-    default:
-        console.log("chu nhat");
-        break;
-}
+// switch (day) {
+//     case "monday":
+//         console.log(`thu 2 ${day}`);
+//         break;
+//     case "tuesday":
+//     case "wednesday":
+//         console.log("thu 3 hoac thu 4");
+//         break;
+//     case "thurday":
+//         console.log(`thu ${day}`);
+//         break;
+//     case "friday":
+//         console.log("hom nay la thu 6 ngay 13 em oi");
+//         break;
+//     case "saturday":
+//         console.log("thu 7");
+//         break;
+//     default:
+//         console.log("chu nhat");
+//         break;
+// }
 
-if (day === "monday") {
-    console.log(`thu 2 ${day}`);
-} else if (day === "tuesday" || day === "wednesday") {
-    console.log("thu 3 hoac thu 4");
-} else if (day === "thurday") {
-    console.log(`thu ${day}`);
-} else if (day === "friday") {
-    console.log("hom nay la thu 6 ngay 13 em oi");
-} else if (day === "saturday") {
-    console.log("thu 7");
+// if (day === "monday") {
+//     console.log(`thu 2 ${day}`);
+// } else if (day === "tuesday" || day === "wednesday") {
+//     console.log("thu 3 hoac thu 4");
+// } else if (day === "thurday") {
+//     console.log(`thu ${day}`);
+// } else if (day === "friday") {
+//     console.log("hom nay la thu 6 ngay 13 em oi");
+// } else if (day === "saturday") {
+//     console.log("thu 7");
+// } else {
+//     console.log("chu nhat");
+// }
+
+//condition ternary operator
+
+const age = 14;
+age >= 18 ? console.log("du tuoi uong ruou") : console.log("chua du tuoi uong ruou");
+
+const drink = age >= 18 ? "du tuoi uong ruou roi ne" : "chua du tuoi uong ruou ne";
+console.log(drink);
+
+// so sanh voi cau lenh if/else
+let drink2;
+if (age >= 18) {
+    drink2 = "du tuoi uong ruou roi ne";
 } else {
-    console.log("chu nhat");
+    drink2 = "chua du tuoi uong ruou ne";
 }
+console.log(drink2);
