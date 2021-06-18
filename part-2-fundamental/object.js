@@ -10,9 +10,19 @@ const jonasArray = [
 const jonas = {
     firstName: 'jonas',
     lastName: 'schmedtmann',
-    age: 2037 - 1999,
+    birth: 1999,
     job: 'teacher',
     friend: ['Micheal', 'Peter', 'Steven'],
+    hasLisence: false,
+    // calcAge: function(birthYear) {
+    //     return 2037 - birthYear;
+    // }
+    calcAge: function() {
+        return 2037 - this.birth;
+    },
+    getSumary: function() {
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasLisence ? 'a' : 'no'} driven's licence`
+    }
 };
 
 /* có hai cách để lấy properties từ một object
@@ -37,3 +47,9 @@ jonas.location = "29 Ngo Gia Tự"
 jonas['fb'] = "Nguyễn Triển"
 
 console.log(jonas);
+
+// object function
+// console.log(jonas.calcAge(1999));
+// console.log(jonas['calcAge'](1999));
+console.log(jonas.calcAge());
+console.log(jonas.getSumary());
