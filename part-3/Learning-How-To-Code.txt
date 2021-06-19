@@ -1,0 +1,40 @@
+clear goal 
+1. set a specific, measurable, realistic and time-base goal;
+2. know exactly why you are learning to code: switching carrers? finding a better;
+3. Imagine a big project you want to be to build!
+4. Research technologies you need and then learn them.
+
+"copy-code" how it works
+1.understand the code that you're studing and typing
+2. alway type the code, don't copy-paste!
+
+reinforce was learning by doing small challenge or taking notes
+1. after you learn a new feature or concept, use it immediately!
+2. take notes
+3. Challenge yourself and practice with small coding exercises and challenges
+4. Don't be in hurry to complete the course fast
+
+practice coding 
+1. Practicing on your own is the most important thing to doing
+2. This is Not optional! Without practice outside of course, you won't go anywhere!
+3. come up with your own project ideas or copy popular sites or application or just part of them in the begining
+4. Don't be struck in "Tutorial hell"
+
+Quickly became frustrates when code was not perpectly clean  of efficient
+1. Don't get struck trying to  write the perfect code!
+2. Just write ton of code, no matter the quatily!
+3. Clean and efficient code will come with time
+4. You can alway refactor code later
+
+lost motivation because you thought could never know everything
+1. Embrace the fact that you will never you know everything
+2. Just focus on what you need achieve your goal!
+
+Don't Isolation yourself "cô lập"
+1. Explain new concept to other people. if you can explain it. you truly understand it.
+2. Share your goals to make yourself 
+3. Share your learning progress with the web dev community (#CodeNewbie, #webdev, etc.)
+
+Don't thought that when then learning web developer and  could start applying to jobs
+1. the biggest misconception that people have.
+2. Courses are an amazing starting point, but are  only the begining  of your journey!
