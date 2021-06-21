@@ -1,0 +1,47 @@
+Whenever John encounter a problem:
+1. Don't jumps at the problem without much thinking 
+2. Don't implements solution in an unstructured way
+3. Don't gets stressed out when things don't work
+4. Don't is proud to research solutions
+=> stay calm and slow down, don't just jump at problem without a plan
+=> take a very logical and  rational  approach
+
+=> use my 4-step framework to solve any problem:
+
+1). make sure you 100% understand the problem. Ask the right question to get a clear picture of the problem.
+vi dụ: 
+project manager: "We need a function that reverse whatever we pass  into it".? "tôi cần một hàm mà lưu được bất cứ cái gì tôi đưa vào
+ 1. What does "Whatever" even mean in this context? What should be reverse.(Bất cứ cái gì trong ngữ cảnh này là cái gi? Cái cần lưu trữ là gì?)
+ answer: only strings, number, and array make sense to reserve;
+ 2. what to do if something else is pass in?
+ 3. What should be returned? Should it always be a string, or should the type  be the same  as pass it?
+ 4. How to regconize whether the argument is a number, a string, or array?
+ 5. How to reserve  a number, a string, and an array? 
+
+2). Divide and conquer: Break a big problem into smaller sub-problems.
+    Check if argument is a number, a string, or an array
+    implement reversing a nunber
+    implement reversing a string
+    implement reversing an array
+    return reverse value
+
+3) Don't be afraid to do as much research as you have to
+    how to check if a value is a number, string, an array in javascript
+    how to reverse a number, string, an array in javascript
+
+4) For bigger problems, write pseudo-code before writing the actual code
+    example: 
+    function reverse(value)
+        if value type !string  || !number ||! array
+            return value
+        
+        if value type  == string 
+            return string
+        if value type == number 
+            return number 
+        if value type == array
+            return array
+        
+        return reverse value
+
+
