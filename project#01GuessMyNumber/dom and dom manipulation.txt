@@ -1,0 +1,2 @@
+DOM
+=> Domcument object Model: structured representation of HTML Documents allows javascript to access elements and styles to manipulate them
