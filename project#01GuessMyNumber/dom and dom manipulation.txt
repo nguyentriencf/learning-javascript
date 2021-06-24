@@ -1,2 +1,3 @@
 DOM
-=> Domcument object Model: structured representation of HTML Documents allows javascript to access elements and styles to manipulate them
+=> Domcument object Model: structured representation of HTML Documents allows javascript to access elements and styles to manipulate them.
+lưu ý DOM với css: đâu tiên cũng cần querySerlect('').style.scalemalCase . Nếu element của html thì kh cần dấu chấm hoặc dấu # như trường hợp của claas và id vd: document.querySelector('body')
