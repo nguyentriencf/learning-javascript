@@ -12,10 +12,18 @@ const openModal = function() {
 }
 const closeModal = function() {
     modal.classList.add('hidden');
-    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
 }
 for (let i = 0; i < btnShowModal.length; i++)
     btnShowModal[i].addEventListener('click', openModal)
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// keyup là sự kiện khi thả tay ra khỏi phím
+//keypress là sự kiện khi nhấn giữ một phím nào đó
+// key down là sự kiên khi nhấn một phím bất kì
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hiiden'))
+        closeModal();
+})
