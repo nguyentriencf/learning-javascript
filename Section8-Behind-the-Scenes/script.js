@@ -55,9 +55,51 @@ var addArrow = (a, b) => a + b;
 
 
 // example var variable
-if (!numProduct) deleteShopingCart();
-var numProduct = 10;
+// if (!numProduct) deleteShopingCart();
+// var numProduct = 10;
 
-function deleteShopingCart() {
-    console.log("All product deleted");
+// function deleteShopingCart() {
+//     console.log("All product deleted");
+// }
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z === window.z);
+
+// console.log(this);
+
+const calcAge = function(birthYear) {
+    console.log(2037 - birthYear);
+    console.log(this);
 }
+calcAge(1999);
+
+const calcAgeArrow = (birthYear) => {
+    console.log(2037 - birthYear);
+    console.log(this);
+}
+calcAgeArrow(1999);
+
+
+const jonas = {
+    year: 1999,
+    calcAge: function() {
+        console.log(2037 - this.year);
+    }
+}
+
+jonas.calcAge();
+
+const trien = {
+    year: 2000,
+}
+
+trien.calcAge = jonas.calcAge;
+trien.calcAge();
+
+const f = trien.calcAge;
+console.log(f);
