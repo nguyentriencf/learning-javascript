@@ -26,10 +26,10 @@
 // how hoisting work
 
 // 
-console.log(me);
+// console.log(me);
 // console.log(job);
 // console.log(year);
-console.log(addDecl(2, 3));
+// console.log(addDecl(2, 3));
 // console.log(addExpr(2, 3));
 
 // undefine
@@ -52,3 +52,12 @@ var addExpr = function(a, b) {
 //error
 //console.log(addArrow(2, 3));
 var addArrow = (a, b) => a + b;
+
+
+// example var variable
+if (!numProduct) deleteShopingCart();
+var numProduct = 10;
+
+function deleteShopingCart() {
+    console.log("All product deleted");
+}
