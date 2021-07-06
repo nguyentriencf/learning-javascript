@@ -105,51 +105,107 @@
 // console.log(f);
 
 // var firstName = "Van"
-const jonas = {
-    firstName: 'Jonas',
-    year: 1999,
-    calcAge: function() {
-        console.log(this);
-        console.log(2037 - this.year);
-        // solotion 1
-        // const self = this;
-        // const isMilenital = function() {
-        //     // console.log(this);
-        //     // console.log(this.year >= 1981 && this.year <= 1999);
-        //     console.log(self);
-        //     console.log(self.year >= 1981 && self.year <= 1999);
+// const jonas = {
+//     firstName: 'Jonas',
+//     year: 1999,
+//     calcAge: function() {
+//         console.log(this);
+//         console.log(2037 - this.year);
+// solotion 1
+// const self = this;
+// const isMilenital = function() {
+//     // console.log(this);
+//     // console.log(this.year >= 1981 && this.year <= 1999);
+//     console.log(self);
+//     console.log(self.year >= 1981 && self.year <= 1999);
 
-        // solotion 2
-        const self = this;
-        const isMilenital = () => {
-            // console.log(this);
-            // console.log(this.year >= 1981 && this.year <= 1999);
-            console.log(self);
-            console.log(self.year >= 1981 && self.year <= 1999);
-        }
-        isMilenital();
-    },
+// solotion 2
+// const self = this;
+// const isMilenital = () => {
+// console.log(this);
+// console.log(this.year >= 1981 && this.year <= 1999);
+// console.log(self);
+// console.log(self.year >= 1981 && self.year <= 1999);
+//     }
+//     isMilenital();
+// },
 
-    great: () => {
-        console.log(this);
-        console.log(`Hey ${this.firstName}`)
-    }
-}
+//     great: () => {
+//         console.log(this);
+//         console.log(`Hey ${this.firstName}`)
+//     }
+// }
 
-jonas.great();
-jonas.calcAge();
+// jonas.great();
+// jonas.calcAge();
 
 // not error
-const addExpr = function(a, b) {
-    console.log(arguments);
-    return a + b;
-}
-addExpr(1, 3, 2);
+// const addExpr = function(a, b) {
+//     console.log(arguments);
+//     return a + b;
+// }
+// addExpr(1, 3, 2);
 
-//error
-var addExpr1 = (a, b) => {
-    console.log(arguments);
-    return a + b;
-}
+// //error
+// var addExpr1 = (a, b) => {
+//     console.log(arguments);
+//     return a + b;
+// }
 
 // addExpr1(1, 12, 12)
+
+// let age = 22;
+// let oldAge = age;
+// age = 23;
+
+// console.log(age);
+// console.log(oldAge);
+
+
+
+// const me = {
+//     name: "trien",
+//     age: 22
+// }
+
+// const frien = me;
+// frien.age = 23;
+
+// console.log("me:", me);
+// console.log("frien:", frien);
+
+// primitive type
+let lastName = "Williams";
+const oldLastName = lastName;
+lastName = "Davis";
+console.log(oldLastName);
+console.log(lastName);
+
+// reference type
+
+const jessica = {
+    firstName: "Jessica",
+    lastName: "Williams",
+    age: 27,
+}
+
+
+const marriedJessica = jessica;
+marriedJessica.lastName = "Davis";
+
+// console.log("before marriage", jessica);
+// console.log("after marriage", marriedJessica);
+
+// copying object
+const jessica2 = {
+    firstName: "Jessica",
+    lastName: "Williams",
+    age: 27,
+    family: ['trien', 'van']
+}
+
+// only copy shallow
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = "Davis";
+console.log("before marriage", jessica2);
+console.log("After marriage", jessicaCopy);
