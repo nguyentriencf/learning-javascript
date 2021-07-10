@@ -31,9 +31,44 @@ const restaurant = {
     },
     oderDelivery: function({ starterIndex = 1, mainIndex = 0, time = '22:20', address }) {
         console.log(`Order receive! ${this.starterMenu[starterIndex]} and ${this.categories[mainIndex]}, will be delivery ${address} at ${time}`);
+    },
+    orderPasta: function(ing1, ing2, ing3) {
+        console.log(`Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`);
     }
 };
 
+
+// the spread operator
+const arr = [7, 8, 9]
+const badNewArr = [1, 2, 3, ...arr]
+console.log(badNewArr);
+// => [1, 2, 3, 7, 8, 9]
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+const str = "Trien";
+const letters = [...str, "s."];
+console.log(letters);
+
+
+// real-would example
+const ingredients = [prompt("Let\'s make pasta! Ingredient 1'?"), prompt("Ingredient 2'?"), prompt("Ingredient 3'?")]
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+
+//object
+const newRestaurents = { founderIn: 1998, restaurant, founder: 'Guisepe' }
+console.log(newRestaurents);
+
+const restaurantCoppy = {...restaurant };
+restaurantCoppy.name = 'Nguyen Trien';
+console.log(restaurantCoppy.name);
+console.log(restaurant.name);
+
+/*
 restaurant.oderDelivery({
     time: "23:30",
     address: "29 Ngo Gia Tu",
