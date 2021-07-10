@@ -34,10 +34,43 @@ const restaurant = {
     },
     orderPasta: function(ing1, ing2, ing3) {
         console.log(`Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`);
+    },
+    oderPizza: function(mainIngredient, ...otherIngredient) {
+        console.log(mainIngredient);
+        console.log(otherIngredient);
     }
 };
 
+restaurant.oderPizza('Mushrooms', 'onion', 'olive', 'spinach');
+//1) destructuring
+// spread  because on right side of = 
+const arr = [1, 2, ...[3, 4, 5]];
 
+//rest because on left side of =
+const [a, , c, ...others] = [...arr];
+console.log(a, c, others);
+//1 3 (2) [4, 5]
+//1 2 (3) [3, 4, 5]
+
+const { sat, ...weekenDays } = restaurant.openingHours;
+console.log(weekenDays);
+//2) function
+const add = function(...number) {
+    let sum = 0;
+    for (let i = 0; i < number.length; i++)
+        sum += number[i];
+    console.log(sum);
+}
+
+add(1, 2);
+add(3, 4, 5);
+add(6, 7, 8, 9);
+// [1, 2]
+// [3, 4, 5]
+// [6, 7, 8, 9]
+const x = [0, 98, 98]
+add(...x)
+    /*
 // the spread operator
 const arr = [7, 8, 9]
 const badNewArr = [1, 2, 3, ...arr]
@@ -70,13 +103,13 @@ console.log(restaurant.name);
 
 /*
 restaurant.oderDelivery({
-    time: "23:30",
-    address: "29 Ngo Gia Tu",
-    mainIndex: 2,
-    starterIndex: 2,
+time: "23:30",
+address: "29 Ngo Gia Tu",
+mainIndex: 2,
+starterIndex: 2,
 });
 restaurant.oderDelivery({
-    address: "30 Ngo Gia Tu",
+address: "30 Ngo Gia Tu",
 })
 
 const { name, openingHours, categories } = restaurant;
@@ -125,7 +158,7 @@ const [x, y, z] = arr;
 // console.log(a, b, c);
 
 let [main, secondary] = restaurant.categories
-    // console.log(main, secondary);
+// console.log(main, secondary);
 
 // switching variable
 // const temp = main;
@@ -149,7 +182,7 @@ let [starter, mainC] = restaurant.order(0, 0);
 // destructuring inside array other
 // nested destructuring
 const nested = [1, 2, [3, 4]]
-    // let [i, j, k] = nested
+// let [i, j, k] = nested
 let [i, , [j, k]] = nested;
 // console.log(i, j, k);
 
