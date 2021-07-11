@@ -54,11 +54,11 @@ console.log(undefined || null);
 
 console.log(undefined || 0 || '' || 'hello' || 23);
 // hello
-restaurant.numGuests = 39
-const guests = restaurant.numGuests ? restaurant.numGuests : 10;
-const guests2 = restaurant.numGuests || 10;
-console.log(guests);
-console.log(guests2);
+// restaurant.numGuests = 39
+// const guests = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests);
+// console.log(guests2);
 
 console.log('---------- And ---------');
 console.log(0 && 'Trien');
@@ -77,6 +77,18 @@ restaurant.oderPizza && restaurant.oderPizza('mushrooms', 'spinach');
 // 40 ["spinach"]
 // 39 mushrooms
 // 40 ["spinach"]
+
+console.log("---------- nullish value ---------");
+
+// ---------- OR ---------
+restaurant.numGuests = 0
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// ---------- nullish value ---------
+
+// const guestsCorrest = 0 ?? 10;
+
 
 
 /*
