@@ -41,9 +41,48 @@ const restaurant = {
     }
 };
 
+console.log('---------- OR ---------');
+
+console.log(3 || 'Trien');
+console.log('' || 'Trien');
+console.log(true || 0);
+console.log(undefined || null);
+// 3
+// 46 Trien
+// 47 true
+// 48 null
+
+console.log(undefined || 0 || '' || 'hello' || 23);
+// hello
+restaurant.numGuests = 39
+const guests = restaurant.numGuests ? restaurant.numGuests : 10;
+const guests2 = restaurant.numGuests || 10;
+console.log(guests);
+console.log(guests2);
+
+console.log('---------- And ---------');
+console.log(0 && 'Trien');
+// 0
+console.log(39 && 'Trien');
+// Trien
+
+console.log('hello' && 23 && null && 'trien');
+
+// Practical  example
+if (restaurant.oderPizza) {
+    restaurant.oderPizza('mushrooms', 'spinach');
+}
+restaurant.oderPizza && restaurant.oderPizza('mushrooms', 'spinach');
+// mushrooms
+// 40 ["spinach"]
+// 39 mushrooms
+// 40 ["spinach"]
+
+
+/*
 restaurant.oderPizza('Mushrooms', 'onion', 'olive', 'spinach');
 //1) destructuring
-// spread  because on right side of = 
+// spread  because on right side of =
 const arr = [1, 2, ...[3, 4, 5]];
 
 //rest because on left side of =
