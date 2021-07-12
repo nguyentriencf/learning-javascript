@@ -63,10 +63,12 @@ const game = {
 const [player1, player2] = game.players;
 console.log(player1, player2);
 //2. 
+//rest operator
 const [gk, ...fieldPlayers] = player1;
 console.log(gk, fieldPlayers);
 
 //3.
+//spread operator
 const allPlayers = [...player1, ...player2];
 console.log(allPlayers);
 //4.
@@ -76,6 +78,7 @@ const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
 const { odds: { team1, x: draw, team2 } } = game;
 console.log(team1, draw, team2);
 //6.
+
 const printGoals = function(...player) {
     console.log(player);
     console.log(`${player.length} goals were scored`);
@@ -85,5 +88,6 @@ printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich')
 printGoals('Davies', 'Muller')
 printGoals(...game.scored);
 //7.
+// short circuiting
 team1 < team2 && console.log('team1 more likely win');
 team1 > team2 && console.log('team2 more likely win');
