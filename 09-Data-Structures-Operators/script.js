@@ -41,6 +41,17 @@ const restaurant = {
     }
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]
+
+// for-of loop
+for (let item of menu) console.log(item);
+
+for (let item of menu.entries()) console.log([`${item[0]} : ${item[1]}`]);
+
+for (let [i, el] of menu.entries()) console.log([`${i} : ${el}`]);
+
+
+/*
 console.log('---------- OR ---------');
 
 console.log(3 || 'Trien');
