@@ -46,6 +46,44 @@ const restaurant = {
     }
 };
 
+const rest = new Map();
+rest.set('name', 'Nguyen Dinh Phat Trien');
+rest.set(3,1999);
+rest.set('monhoc:',['js','react','C#']);
+console.log(rest.set('name2','Tran Thi Thu Van'));
+// Map(4) {"name" => "Nguyen Dinh Phat Trien", 3 => 1999, "monhoc:" => Array(3), 2 => "Tran Thi Thu Van"}
+
+
+rest.set('categories',['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+.set('open',11)
+.set('close',23)
+.set(true,'we are open')
+.set(false,'we are close');
+console.log(rest.get('name'));
+console.log(rest.get('name2'));
+console.log(rest.get('open'));
+console.log(rest.get('close'));
+console.log();
+// Nguyen Dinh Phat Trien
+// 63 Tran Thi Thu Van
+// 64 11
+// 65 23.
+
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('name'));
+//true
+rest.set(document.querySelector('h1'), 'Heading')
+const arr =[1,2];
+rest.set(arr,'test');
+console.log(rest);
+console.log(rest.size);
+console.log(rest.get(arr));
+// test 
+
+/*
+// sets
 const orderSet = new Set([
     'Pizza', 
     'Pizza',
