@@ -21,7 +21,6 @@ const openingHours = {
 };
 // Data needed for first part of the section
 
-
 const restaurant = {
     name: 'Classico Italiano',
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -45,7 +44,64 @@ const restaurant = {
         console.log(otherIngredient);
     }
 };
+// Boolean
+const A  = 'A32neo';
+console.log(A);
+console.log(A.includes('A32'));
+console.log(A.includes('boeing123'));   
+console.log(A.startsWith('A'));
+// true
+// 51 false
+// 52 true
+
+//practice exercise
+const checkBaggage = function(items) {
+    const baggage = items.toLowerCase();
+    console.log(baggage);
+    if(baggage.includes('knife') || baggage.includes('gun')){
+        console.log('Not allow board');
+    }else {
+        console.log('Welcom to board');
+    }
+}
+
+checkBaggage('I have a laptop, food, knife');
+checkBaggage('socks and camera');
+checkBaggage('Got some Snack and a Gun for protection')
+// replacing
+const priceVND = '39,1999vnd'
+const priceUS = priceVND.replace('vnd','$').replace(',','.')
+console.log(priceUS);
+
+const anoucement = 'All passenger come to boarding door 23, Boarding door 23!'
+// console.log(anoucement.replace('door','gate'));
+console.log(anoucement.replace(/door/g,'gate'));
+
+//All passenger come to boarding gate 23, Boarding door 23!
+// console.log(anoucement.replaceAll('door','gate'));
+// All passenger come to boarding gate 23, Boarding gate 23!    
+
+
+// Comparing emails 
+const email = 'nguyentrien0309@gmail.com'
+const emailLogin =' Nguyentrien0309@gmail.com ';
+console.log(email);
+// const lowerEmail = emailLogin.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+const nomalizationEmail = emailLogin.toLowerCase().trim();
+
+console.log(email === nomalizationEmail);
+//true
+
+// Fix capitalation in name 
+const passenger = 'tRieN';
+const passengerLowerCase = passenger.toLocaleLowerCase();
+const passengerCorrect = passengerLowerCase[0].toUpperCase() + passengerLowerCase.slice(1);
+console.log(passenger);
+console.log(passengerCorrect);
+
 //string
+
 const airPlane = 'TAP AIR Portugal'
 const plane = 'A320'
 console.log(plane[0]);
@@ -75,7 +131,7 @@ checkMiddleSeat('3C')
 checkMiddleSeat('11E')
 
 console.log(new String('Trien'));
-console.log(typeof new String('Triengit '));
+console.log(typeof new String('Trien'));
 
 
 
