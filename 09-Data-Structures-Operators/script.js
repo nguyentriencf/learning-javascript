@@ -45,8 +45,43 @@ const restaurant = {
         console.log(otherIngredient);
     }
 };
+//string
+const airPlane = 'TAP AIR Portugal'
+const plane = 'A320'
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+// A 3 2 0
+console.log('A320'[0]);
+
+console.log(airPlane.slice(4,7));
+console.log(airPlane.slice(0,airPlane.indexOf(' ')));
+
+console.log(airPlane.slice(-2));
+// al
+console.log(airPlane.slice(1,-1));
+
+const checkMiddleSeat = function(seat) {
+    // B and E is middle seat 
+    const s= seat.slice(-1)
+    if( s==='B'|| s==='E')
+        console.log('You got the middle seat');
+    else
+        console.log('You got lucky!');
+}
+checkMiddleSeat('11B')
+checkMiddleSeat('3C')
+checkMiddleSeat('11E')
+
+console.log(new String('Trien'));
+console.log(typeof new String('Triengit '));
 
 
+
+
+
+/*
 const question = new Map([
     ['question','What is the best programming languege in the would'],
     [1,'C'],
