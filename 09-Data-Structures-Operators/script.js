@@ -44,6 +44,55 @@ const restaurant = {
         console.log(otherIngredient);
     }
 };
+
+// split and join
+console.log('nguyen+trien+learning+js'.split('+'));
+console.log('Nguyen Trien'.split(' '));
+const [lastName,firstName] = 'Nguyen Trien'.split(' ');
+const newName= ['Mr.',lastName,firstName.toUpperCase()].join(' ');
+console.log(newName);
+
+const capitalizeName = function(name) {
+    const names = name.split(' ');
+    const nameUpper = [];
+    for(const n of names) {
+        // nameUpper.push(n[0].toUpperCase()+ n.slice(1))
+        nameUpper.push(n.replace(n[0], n[0].toUpperCase()));
+    }
+console.log(nameUpper.join(' '));
+}
+capitalizeName('nguyen dinh phat trien')
+// paading
+const message = 'go to gate 23!'
+console.log(message.padStart(25,'+').padEnd(30,'+'));
+//+++++++++++go to gate 23!+++++
+
+const maskCreditCard = function(number) {
+    const str =  number +'';
+    const last = str.slice(-4);
+    return last.padStart(str.length,'*')
+}
+console.log(maskCreditCard(98349));
+
+console.log(maskCreditCard(9842938928349));
+console.log(maskCreditCard('09898798788787'));
+// repeat
+ const message2 = 'Bad weather ... All Departure';
+ console.log(message2.repeat(5));
+
+ const planeInLine = function(n) {
+     console.log(n);
+     console.log(`There are ${n} planes in line ${'✈'.repeat(n)}`);
+ };
+ planeInLine(3);
+ planeInLine(8);
+ planeInLine(5);
+ planeInLine(100);
+
+
+
+
+/*
 // Boolean
 const A  = 'A32neo';
 console.log(A);
