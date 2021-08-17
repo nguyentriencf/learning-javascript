@@ -1,7 +1,34 @@
-// 'use strict';
+'use strict';
 
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();// / /g là một regular expression để chọn tât cả các khoảng trăng
+};
 
+const upperCase = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
 
+// higher-order function vì thàm số thứ 2 là một func
+// chú ý tham số thứ thứ 2 là chỉ truyền chính giá trị hàm vì thế nó chỉ là giá trị chúng ta không gọi đó là hàm
+const transformer = function (str, fn) {
+    console.log(`Original strings:  ${str}`);
+    console.log(`Transformed string: ${fn(str)}`);
+    console.log(`Transformed by: ${fn.name}`);
+};
+transformer('javascript is the best!',upperCase);
+transformer('javascript is the best!', oneWord);
+
+// upperCase và oneWord được được là tham số thì lúc này chúng sẽ được gọi là callback-function
+
+const high5 = function(){
+    console.log('🤞');
+}
+document.body.addEventListener('click',high5)
+// cũng giống như ví dụ trên high5 được gọi là callback-function
+// addEventListener được gọi là higher-order function
+
+/*
 //How Passing Arguments Works: Value vs. Reference
 
 const flight = 'PT399'
@@ -25,7 +52,6 @@ const newPassport = function(person) {
 }
 newPassport(trien);
 checkIn(flight,trien)
-
 
 // default parameter
 /*
