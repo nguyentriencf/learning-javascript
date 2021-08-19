@@ -1,5 +1,27 @@
 'use strict';
 
+// function returning function
+const great = function(greating) {
+    return function(name) {
+        console.log(`${greating} ${name}`);
+    }
+}
+
+const greatng = great('Nguyen')
+greatng('Trien')
+great('trien')('nguyen');
+// const great2 = (greatings) =>{
+//     return (names) =>{
+//         console.log(`${greatings} ${names}`);
+//     }
+// }
+
+const great2 = greatings => names => console.log(`${greatings} ${names}`);
+
+great2('trien1')('nguyen1');
+
+
+/*
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();// / /g là một regular expression để chọn tât cả các khoảng trăng
 };
