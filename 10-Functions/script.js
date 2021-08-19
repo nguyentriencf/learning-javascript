@@ -1,5 +1,40 @@
 'use strict';
 
+//the call and apply Methods
+const lufthanasa = {
+    airline:'lufthansa',
+    iataCode:'PT',
+    bookings: [],
+    //book: function(){}
+    book(flightNum, name){
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+        this.bookings.push({ flight: `${this.iataCode}${flightNum}, ${name}` });
+    }
+};
+lufthanasa.book('3999','Trien')
+console.log(lufthanasa);
+
+const trienAirline = {
+    airline:'trienAriline',
+    iataCode:'TT',
+    bookings:[]
+}
+const book = lufthanasa.book;
+// call method nhận list argument
+book.call(trienAirline, 19, 'VanTran');
+
+// apply method không nhận list argument
+const ctAirline = {
+    airline:'NGuyen Dinh Phat Trien',
+    iataCode:'NDFF',
+    bookings:[]
+}
+const flightData = [456,'Mr.TrienDepTrai']
+book.apply(ctAirline,flightData)
+console.log(ctAirline);
+book.call(trienAirline,...flightData);
+
+/*
 // function returning function
 const great = function(greating) {
     return function(name) {
