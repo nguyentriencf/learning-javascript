@@ -34,6 +34,48 @@ book.apply(ctAirline,flightData)
 console.log(ctAirline);
 book.call(trienAirline,...flightData);
 
+//The bind Method
+const bookCtAirline = book.bind(ctAirline);
+bookCtAirline( 332,'bindMethod')
+const bookTrienAirline = book.bind(trienAirline,23);
+bookTrienAirline('passengers');
+bookTrienAirline('accountHolder')
+
+//with event Listener
+lufthanasa.planes = 300;
+lufthanasa.buyPlane = function(){
+    console.log(this);
+    this.planes++;
+    console.log(this.planes);
+}
+// this key lúc này sẽ là button nên ta kh thể truy cập được data bên trong lufthanasa
+lufthanasa.buyPlane()
+console.log(lufthanasa);
+document.querySelector('.buy').addEventListener('click',lufthanasa.buyPlane.bind(lufthanasa))
+// bind sẽ trả về một func mơi. Bởi vì ta truyền thàm số lufthanasa vào trong hàm bind thì lúc này this key word lúc này sẽ có data là lufthanasa
+// call and apply method là sẽ gọi hàm còn bind method sẽ return về new function
+
+// partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1,200));
+
+const addVAT = addTax.bind(null,0.23)
+// (value) => value + value * rate;
+// tham số thứ nhất là this key work nhưng để null thì kh có bất cứ gì xảy ra
+// hàm này khác với default parameter bời nó tạo ra một hàm mới từ bind method dựa vào hàm addTax
+// default parameter là hàm tái sử dụng 
+// Một điều cần chú ý khi sử dụng bind method như ví đó là vị trị của từng argument phải đúng vị trí khi truyền thàm số vào hàm
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+const addTaxVat = function(rate) {
+    return function(value){
+        return value + value *rate;
+    }
+}
+const addVat2 = addTaxVat(0.1)
+console.log(addVat2(200));
+
 /*
 // function returning function
 const great = function(greating) {
