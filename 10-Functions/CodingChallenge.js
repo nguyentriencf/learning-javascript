@@ -60,8 +60,7 @@ document.querySelector('.poll').addEventListener('click',poll.registerNewAnswer.
 
 // phương thức call lúc này sẽ tạo ra một answers[] và gán theo mảng mới từ đó sẽ cho ra kq khắc mới answer của poll obj
 poll.displayResult.call({ answers: [5, 2, 3]});
-
-poll.displayResult.call({ answers:[1, 5, 3, 9, 6, 1] });
+poll.displayResult.call({ answers:[1, 5, 3, 9, 6, 1]},'string');
 
 
 

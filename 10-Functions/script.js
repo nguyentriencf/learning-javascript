@@ -1,5 +1,17 @@
 'use strict';
 
+// 
+const runOne = function(){
+    console.log('this is never run again');
+}
+runOne();
+
+//Immediately Invoke Funtion Expression (IIFE)
+(function(){console.log('this is never run again')})()
+// IIEF cũng là việc với arrow function
+// (() => console.log('This will ALSO never run again'))();
+
+/*
 //the call and apply Methods
 const lufthanasa = {
     airline:'lufthansa',
