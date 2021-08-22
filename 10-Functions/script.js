@@ -1,6 +1,6 @@
 'use strict';
 
-//More Closure Examples
+//
 // ex1:
 let f ;
 const g = function(){
