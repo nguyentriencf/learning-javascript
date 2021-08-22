@@ -1,6 +1,28 @@
 'use strict';
 
 // 
+const secureBooking = function(){
+    let passengerCount = 0;
+    return function(){
+        passengerCount++
+        console.log(`${passengerCount} passenger`);
+    }
+}
+// hàm này lúc này sẽ là phạm vi globle và được đặt trên đầu của call stack
+const booker = secureBooking(); // lúc này secureBooking không còn trong call stack bởi vì hàm này đã exec  
+booker();
+booker();
+booker();
+/*
+Điều gì xảy ra khi hàm con chạy. nó sẽ nhìn closure và nhìn xem nếu có có thể tìm thấy biến trong hàm cha
+ ở đây không và nó sẽ làm điều này ngay trước khi xem xét chuõi phạm vi (scope chain).
+ Cho ví dụ: nếu set biến passengerCount ở là này là 10 thì nó sẽ vẫn sử dung là 1 trong closure vì thế closure
+ về cơ bản là ưu tiên qua scope chain.
+
+
+
+/*
+
 const runOne = function(){
     console.log('this is never run again');
 }
