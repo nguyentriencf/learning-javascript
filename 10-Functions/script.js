@@ -1,6 +1,42 @@
 'use strict';
 
-// 
+//More Closure Examples
+// ex1:
+let f ;
+const g = function(){
+    const a =23;
+    f = function(){
+        console.log( a*2);
+    }
+}
+const h = function(){
+    const b =2
+    f = function(){
+        console.log(b*2);
+    }
+}
+g();
+f();
+console.dir(f);
+
+//  re-assigning f function
+h();
+f();
+console.dir(f);
+// ex2:
+const boardTrien = function(n,wait) {
+    // const perWait = n/3;
+    setTimeout(function(){
+        console.log(`We are now boarding all ${n} people`);
+        console.log(`there are 3 group, each with ${perWait} passenger`);
+    },wait*1000)
+    console.log(`Will start boarding in ${wait} minute`);
+}
+const perWait = 180 // scope chain.
+boardTrien(240,3);
+
+/*
+// Closures
 const secureBooking = function(){
     let passengerCount = 0;
     return function(){
