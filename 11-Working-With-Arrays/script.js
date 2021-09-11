@@ -71,9 +71,11 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+/*
 let arr = ['a','b','c','d','e']
 
 
@@ -116,4 +118,24 @@ console.log([...arr,...arr2]);
 
 // join method trả về một chuỗi nối các phần tử ngăn cách với nhau bằng kí tự trong tham sô truyền vào
 console.log(typeof letter.join('-'));
+*/
 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+
+for (const [i,mov] of movements.entries()) {
+  if(mov >0){
+    console.log(`Movement ${i +1}: You disposit ${mov}`);
+  }else {
+    console.log(`Movement ${i + 1}: You disposit ${Math.abs(mov)}`);
+  }
+}
+console.log('------------forEach-------------------');
+// forEach method using callback function 
+movements.forEach(function(mov,i){
+   if (mov > 0) {
+     console.log(`Movement ${i + 1}: You disposit ${mov}`);
+   } else {
+     console.log(`Movement ${i + 1}: You disposit ${Math.abs(mov)}`);
+   }
+})
