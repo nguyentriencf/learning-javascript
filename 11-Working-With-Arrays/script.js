@@ -120,6 +120,8 @@ console.log([...arr,...arr2]);
 console.log(typeof letter.join('-'));
 */
 
+
+//  Looping Arrays: forEach
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 
