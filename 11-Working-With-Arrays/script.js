@@ -121,10 +121,9 @@ function checkdDogs(dogJulia,dogKate){
 
 }
 checkdDogs([3, 5, 2, 12, 7],[9, 16, 6, 8, 3])
-
-
-
-
+const arrNumber = [200, -200, 340, -300, -20, 50, 400, -460];
+const withdrawal =  arrNumber.filter(mov=> mov>0)
+console.log(withdrawal);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
