@@ -100,32 +100,61 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+// REDUCE METHOD
+// tham số thứ nhất của reduce mothod callback thứ nhất chưa ba tham số 
+// tham số thư nhất là biết tổng mỗi lần lặp , curr là giá trị của biến hiện tại, i => index
+// tham số thứ 2 của reduce method là giá trị khởi tạo trước khi lặp của biến acc
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const calcDisplayBalance = (movements) =>{
+ const balance = movements.reduce((acc, cur, i) => {
+   return acc + cur;
+ }, 0);
+ labelBalance.textContent = `${balance} VND`
+}
+calcDisplayBalance(movements);
+
+
+// REDUCE MOTHOD tương tự như for 
+let balence2 = 0;
+for (let mov of movements) balence2 += mov
+console.log(balence2)
+
+// tìm giá trị lớn nhất trong mảng bằng reduce method
+const max = 
+  movements.reduce((acc, mov)=>{
+    if(acc> mov){
+      return acc
+    }else{
+      return mov
+    } 
+  },movements[0])
+console.log(max);
 // dùng forech cũng ra kết quả tương tự nhưng gây ra side effect 
 // làm ảnh hưởng tới mảng ban đầu.
-const user = "Nguyen Dinh Phat Trien"
-const username =user.split(' ').map((name)=>{
-  return name[0]
-}).join('');
-console.log(username)
+// const user = "Nguyen Dinh Phat Trien"
+// const username =user.split(' ').map((name)=>{
+//   return name[0]
+// }).join('');
+// console.log(username)
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
 
-function checkdDogs(dogJulia,dogKate){
+// function checkdDogs(dogJulia,dogKate){
   
- const dogJuliaCorrected =  dogJulia.slice();
+//  const dogJuliaCorrected =  dogJulia.slice();
 //  dogJuliaCorrected.splice(0,1);
 //  dogJuliaCorrected.splice(-2)
  
- console.log(dogJuliaCorrected.slice(1,3));
+//  console.log(dogJuliaCorrected.slice(1,3));
 
-}
-checkdDogs([3, 5, 2, 12, 7],[9, 16, 6, 8, 3])
-const arrNumber = [200, -200, 340, -300, -20, 50, 400, -460];
-const withdrawal =  arrNumber.filter(mov=> mov>0)
-console.log(withdrawal);
+// }
+// checkdDogs([3, 5, 2, 12, 7],[9, 16, 6, 8, 3])
+// const arrNumber = [200, -200, 340, -300, -20, 50, 400, -460];
+// const withdrawal =  arrNumber.filter(mov=> mov>0)
+// console.log(withdrawal);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
