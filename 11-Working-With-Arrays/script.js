@@ -89,7 +89,7 @@ Create a function 'checkDogs', which accepts 2 arrays of dog's ages ('dogsJulia'
 
 1. Julia found out that the owners of the FIRST and the LAST TWO dogs actually have cats, not dogs! So create a shallow copy of Julia's array, and remove the cat ages from that copied array (because it's a bad practice to mutate function parameters)
 2. Create an array with both Julia's (corrected) and Kate's data
-3. For each remaining dog, log to the console whether it's an adult ("Dog number 1 is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy 🐶")
+3. For each remaining dog, log to the console whether i t's an adult ("Dog number 1 is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy 🐶")
 4. Run the function for both test datasets
 
 HINT: Use tools from all lectures in this section so far 😉
@@ -114,22 +114,32 @@ const calcDisplayBalance = (movements) =>{
 }
 calcDisplayBalance(movements);
 
+const calcAverageHumanAge = function(Ages){
+  const humanAge = Ages.map(age => age<= 2 ? 2 * age : 16 + age* 4)
+  const adult = humanAge.filter(age => age >=18);
+  const average = adult.reduce((acc, age,i,arr)=>{
+    return acc + age /arr.length
+  },0)
+  return average;
+}
+const result = calcAverageHumanAge([3, 5, 2, 12, 7]);
 
+console.log(result)
 // REDUCE MOTHOD tương tự như for 
-let balence2 = 0;
-for (let mov of movements) balence2 += mov
-console.log(balence2)
+// let balence2 = 0;
+// for (let mov of movements) balence2 += mov
+// console.log(balence2)
 
 // tìm giá trị lớn nhất trong mảng bằng reduce method
-const max = 
-  movements.reduce((acc, mov)=>{
-    if(acc> mov){
-      return acc
-    }else{
-      return mov
-    } 
-  },movements[0])
-console.log(max);
+// const max = 
+//   movements.reduce((acc, mov)=>{
+//     if(acc> mov){
+//       return acc
+//     }else{
+//       return mov
+//     } 
+//   },movements[0])
+// console.log(max);
 // dùng forech cũng ra kết quả tương tự nhưng gây ra side effect 
 // làm ảnh hưởng tới mảng ban đầu.
 // const user = "Nguyen Dinh Phat Trien"
